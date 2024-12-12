@@ -1,0 +1,30 @@
+entity Competition {
+id
+name
+count_of
+Result
+}
+
+entity Participant  {
+id
+name
+sex
+age
+}
+
+entity Result {
+first
+second
+third
+name_comp
+}
+
+entity comp_part
+{
+id_comp
+id_part
+}
+
+Result -- Competition 
+comp_part *-- Competition
+Participant --* comp_part

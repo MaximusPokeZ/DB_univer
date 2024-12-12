@@ -1,0 +1,42 @@
+@startuml
+
+entity Client {
+id
+sex
+name
+age
+}
+
+entity Trainer {
+id
+sex
+name
+}
+
+
+
+entity Exercise {
+id
+name
+client_id
+time
+}
+
+entity exercise_trainer
+{
+trainer_id
+exercise_id
+}
+
+
+
+
+
+Trainer --* exercise_trainer
+Client --* Exercise
+exercise_trainer *-- Exercise
+
+
+
+
+@enduml

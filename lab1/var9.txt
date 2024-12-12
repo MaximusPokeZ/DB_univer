@@ -1,0 +1,19 @@
+entity Movie {
+id
+name
+plot
+}
+
+entity Session {
+id
+time
+movie_id
+}
+
+entity Book {
+id
+film_id
+}
+
+Book *-- Session
+Movie --* Session

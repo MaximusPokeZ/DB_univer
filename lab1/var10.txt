@@ -1,0 +1,27 @@
+entity Book {
+id
+client_id
+cost
+}
+
+entity Client {
+id
+sex
+name
+age
+}
+
+entity Medicine {
+id
+name
+disease
+}
+
+entity medicine_book {
+id_book
+id_med
+}
+
+Client --* Book
+medicine_book *-- Medicine
+medicine_book *-- Book
